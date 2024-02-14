@@ -1,0 +1,128 @@
+.img-slid-1 {
+  display: none;
+}
+
+.row {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: VAG Rounded Next Thin;
+}
+
+.SnellRoundhand {
+  font-family: SnellRoundhand;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+.show{
+  opacity: 1;
+}
+
+.watch_vdo {
+  z-index: 1;
+  cursor: pointer;
+}
+
+.watch_vdo:hover {
+  text-decoration: underline;
+}
+
+.scroll-vid {
+  .content {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+@font-face {
+  font-family: 'VAG Rounded Next Thin';
+  src: url(https://cdn.shopify.com/s/files/1/0550/2913/7495/files/Monotype_-_VAG_Rounded_Next_Thin_dab944f0-2580-4111-96df-229e539441e8.woff2?v=1692845437) format('woff2');
+}
+
+@font-face {
+  font-family: 'SnellRoundhand';
+  src: url(https://cdn.shopify.com/s/files/1/0550/2913/7495/files/SnellRoundhand-01.woff2?v=1692845575) format('woff2');
+}
+
+.tx-body {
+  font-weight: 600;
+}
+
+.wrap-shadow {
+  opacity: 1;
+  position: absolute;
+  top: 0%;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.796);
+  /* background: rgb(99, 50, 14);
+  background: linear-gradient(90deg, rgba(99, 50, 14, 1) 0%, rgba(99, 50, 14, 0) 50%, rgba(99, 50, 14, 1) 100%); */
+  /* transition: opacity 0.2s ease-in; */
+}
+
+
+@media only screen and (max-width: 1020px) {
+  #lightpass {
+    display: none;
+
+  }
+
+  .t-black {
+    color: black !important;
+  }
+
+  .tx-head {
+    font-size: 20px !important;
+  }
+
+  .tx-body {
+    font-size: 18px !important;
+  }
+
+  #scrolly-video {
+    display: none !important;
+  }
+
+  .video-banner {
+    height: 300vh !important;
+  }
+
+  .img-slid-1 {
+    display: block;
+  }
+
+  .tx-vd-slid-0 {
+    top: 2% !important;
+    color: black;
+  }
+
+  .tx-vd-slid-1 {
+    top: 20% !important;
+  }
+
+  .tx-vd-slid-2 {
+    top: 41% !important;
+  }
+
+  .tx-vd-slid-3 {
+    top: 61% !important;
+  }
+
+  .tx-vd-slid-4 {
+    top: 81% !important;
+  }
+}

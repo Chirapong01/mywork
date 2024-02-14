@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+
+<style>
+    img {
+        max-width: 100%;
+    }
+
+    .slider_wrapper {
+        padding: 25px 15px;
+        max-width: px;
+        margin: 0 auto;
+    }
+
+    .splide__arrow {
+        background-color: #ffffff;
+        opacity: 0.5;
+        min-width: unset;
+        padding: unset;
+
+    }
+
+
+    .splide__pagination {
+        bottom: -2rem;
+    }
+
+    .slider_wrapper .splide__pagination__page.is-active {
+        min-width: unset;
+        padding: unset;
+    }
+
+    .slider_wrapper .splide__pagination__page {
+        min-width: unset;
+        padding: unset;
+    }
+
+    @media screen and (min-width: 640px) {
+        .slider_wrapper .splide {
+            padding: 0 4rem;
+        }
+    }
+
+    .paragraph {
+        text-align: justify;
+        padding: 5px;
+        font-size: 17px;
+    }
+
+    .text-h4 {
+        text-align: center;
+        color: #C79C6C;
+    }
+
+    .svg-con {
+        max-width: 80%;
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        .svg-con {
+            max-width: 100%;
+        }
+    }
+
+    .img_box {
+        text-align: center;
+    }
+
+    .round-2 {
+
+        border-radius: 20px;
+        padding: 5px;
+        background: #ffddce;
+    }
+
+    .bound-2 {
+        width: 100%;
+        margin: 0px auto;
+    }
+</style>
+
+<body>
+
+    <div class="page-width bound-2 round-2">
+        <div>
+            <br />
+            <h3 class="text-center" style="font-family: 'VAGRN-Light'; color: #58585B;"></h3>
+        </div>
+
+        <div class="slider_wrapper">
+
+            <div class="splide">
+                <div class="splide__track">
+                    <div class="splide__list">
+                        <div class="splide__slide">
+                            <div class="img_box">
+                                <img class="svg-con"
+                                    src="https://cdn.shopify.com/s/files/1/0636/2303/7146/files/1.webp?v=1693887244"
+                                    alt="plantoys-reasons-1" loading="lazy">
+                            </div>
+                        </div>
+
+                        <div class="splide__slide">
+                            <div class="img_box">
+                                <img class="svg-con"
+                                    src="https://cdn.shopify.com/s/files/1/0636/2303/7146/files/2.webp?v=1693887275"
+                                    alt="plantoys-reasons-2" loading="lazy">
+                            </div>
+                        </div>
+
+                        <div class="splide__slide">
+                            <div class="img_box">
+                                <img class="svg-con"
+                                    src="https://cdn.shopify.com/s/files/1/0636/2303/7146/files/3.webp?v=1693887278"
+                                    alt="plantoys-reasons-3" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="splide__slide">
+                            <div class="img_box">
+                                <img class="svg-con"
+                                    src="https://cdn.shopify.com/s/files/1/0636/2303/7146/files/4.webp?v=1693887279"
+                                    alt="plantoys-reasons-1" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="splide__slide">
+                            <div class="img_box">
+                                <img class="svg-con"
+                                    src="https://cdn.shopify.com/s/files/1/0636/2303/7146/files/5.webp?v=1693887284"
+                                    alt="plantoys-reasons-1" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="splide__slide">
+                            <div class="img_box">
+                                <img class="svg-con"
+                                    src="https://cdn.shopify.com/s/files/1/0636/2303/7146/files/6.webp?v=1693887284"
+                                    alt="plantoys-reasons-1" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="splide__slide">
+                            <div class="img_box">
+                                <img class="svg-con"
+                                    src="https://cdn.shopify.com/s/files/1/0636/2303/7146/files/7.webp?v=1693887284"
+                                    alt="plantoys-reasons-1" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="splide__slide">
+                            <div class="img_box">
+                                <img class="svg-con"
+                                    src="https://cdn.shopify.com/s/files/1/0636/2303/7146/files/8.webp?v=1693887284"
+                                    alt="plantoys-reasons-1" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="splide__slide">
+                            <div class="img_box">
+                                <img class="svg-con"
+                                    src="https://cdn.shopify.com/s/files/1/0636/2303/7146/files/9.webp?v=1693887284"
+                                    alt="plantoys-reasons-1" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <!--Javascript-->
+    <script type="text/javascript">
+        var splide = new Splide('.splide', {
+            perPage: 4,
+            perMove: 1,
+            gap: '0rem',
+            pudding: '3rem',
+
+            drag: 'free',
+            snap: true,
+            arrows: false,
+            pagination: true,
+            autoplay: true,
+            breakpoints: {
+                640: {
+                    perPage: 2,
+                    gap: '.7rem',
+                    padding: '1.5rem',
+
+                },
+                480: {
+                    perPage: 1,
+                    gap: '.7rem',
+                    padding: '1.5rem',
+
+                },
+            },
+            classes: {
+                arrows: 'splide__arrows your-class-arrows',
+                arrow: 'splide__arrow your-class-arrow',
+                prev: 'splide__arrow--prev your-class-prev',
+                next: 'splide__arrow--next your-class-next',
+            },
+        });
+
+        splide.mount();
+    </script>
+
+
+    </div>
+
+
+</body>
+
+</html>

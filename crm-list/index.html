@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            width: 100%;
+            height: 323px;
+            border-radius: 20px;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+
+        .header {
+            width: 100%;
+            height: 178px;
+            background-image: url('https://cdn.shopify.com/s/files/1/0550/2913/7495/files/500.jpg?v=1707907627');
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .info {
+            word-wrap: break-word;
+            text-align: left;
+            margin: 15px;
+        }
+
+        .stong {
+            transform: translateY(-10px);
+            font-weight: bold;
+        }
+
+        .des {
+            font-size: 14px;
+        }
+
+        .card-warp {
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: end;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="card-warp">
+                    <div class="card-body">
+
+                        <div class="header"></div>
+                        <div class="info">
+                            <div class="stong">
+                                Lorem
+                            </div>
+                            <div class="des">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div
+                            style="display: flex;background-color: rgb(133, 136, 91); width: 90px;margin-right: 5px; height: 40px; border-radius: 20px 5px 20px 5px;">
+                            <div style="margin: auto; ">
+                                1111 แต้ม
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 8,
+            freeMode: true,
+            breakpoints: {
+                 150:{
+                    slidesPerView:1
+                 },
+                 310:{
+                    slidesPerView:2
+                 },
+                 480:{
+                    slidesPerView:3
+                 },
+                 620:{
+                    slidesPerView:4
+                 },
+                 820:{
+                    slidesPerView:5
+                 },
+                 999:{
+                    slidesPerView:6
+                 },
+                 1100:{
+                    slidesPerView:7
+                 },
+                 1200:{
+                    slidesPerView:8
+                 }
+            },
+        });
+    </script>
+</body>
+
+</html>

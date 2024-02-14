@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script>
+  <script src="script.js"></script>
+  <title>Document</title>
+</head>
+<style>
+  .breadcrumbs {
+    display: none;
+  }
+
+  .img-slid-1 {
+    display: none;
+  }
+
+  .row {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+
+  .app {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: VAG Rounded Next Thin;
+  }
+
+  .SnellRoundhand {
+    font-family: SnellRoundhand;
+  }
+
+  .watch_vdo {
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .watch_vdo:hover {
+    text-decoration: underline;
+  }
+
+  .wrap-shadow {
+    opacity: 0;
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.796);
+  }
+
+  .hidden-txt {
+    opacity: 0;
+    transition: all 1s;
+  }
+
+  .show-txt {
+    opacity: 1;
+  }
+
+  .text-nap {
+    position: sticky;
+    top: 50%;
+    font-size: 36px;
+    text-align: center;
+    color: white;
+    font-size: 48px;
+    font-weight: 600;
+    transition: all 100ms;
+  }
+
+  .hide {
+    opacity: 0;
+  }
+
+  .scroll-vid {
+    .content {
+      width: 100%;
+      position: sticky;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+  }
+
+  .tx-body {
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: 'VAG Rounded Next Thin';
+    src: url(https://cdn.shopify.com/s/files/1/0550/2913/7495/files/Monotype_-_VAG_Rounded_Next_Thin_dab944f0-2580-4111-96df-229e539441e8.woff2?v=1692845437) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'SnellRoundhand';
+    src: url(https://cdn.shopify.com/s/files/1/0550/2913/7495/files/SnellRoundhand-01.woff2?v=1692845575) format('woff2');
+  }
+
+  @media only screen and (max-width: 1020px) {
+    #lightpass {
+      display: none;
+
+    }
+
+    .t-black {
+      color: black !important;
+    }
+
+    .tx-head {
+      font-size: 20px !important;
+    }
+
+    .tx-body {
+      margin-top: 5px;
+      font-size: 16px !important;
+    }
+
+    #scrolly-video {
+      display: none !important;
+    }
+
+    .video-banner {
+      height: 250vh !important;
+    }
+
+    .img-slid-1 {
+      display: block;
+    }
+
+    .v0 {
+      align-items: baseline !important;
+    }
+
+    .tx-vd-slid-0 {
+      top: 3% !important;
+      color: black;
+    }
+
+    .tx-vd-slid-1 {
+      top: 16% !important;
+    }
+
+    .tx-vd-slid-2 {
+      top: 36% !important;
+    }
+
+    .tx-vd-slid-3 {
+      top: 56% !important;
+    }
+
+    .tx-vd-slid-4 {
+      top: 76% !important;
+    }
+  }
+</style>
+<!-- <script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script> -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<div class="app" style="position: relative; z-index: -1; border-top:5px solid black">
+  <div style="width: 100%; height: 100%; position: absolute; top: 0 ;">
+    <div style="position: relative; width: 100%; height: 100%;">
+      <a href=""></a>
+      <div id="t1" class="text-nap hide ">
+        <div class="t-black tx-head"
+          style="font-size: 48px; font-weight: bold; color: rgb(255, 255, 255); text-align: center;  ">
+          Step Inside a World of Open-Ended Creative Play
+        </div>
+      </div>
+      <div id="t1" class="text-nap hide">
+        <div class="t-black tx-head"
+          style="font-size: 46px; font-weight: bold; color: rgb(255, 255, 255);text-align: center; ">
+          Open Joy
+        </div>
+        <div class="t-black tx-body" style="font-size: 32px; color: rgb(255, 255, 255);text-align: center; ">
+          Play Creatively Within Your Dream House Designed by Your Imagination
+        </div>
+      </div>
+      <div id="t1" class="text-nap hide">
+        <div class="t-black tx-head"
+          style="font-size: 46px; font-weight: bold; color: rgb(255, 255, 255);text-align: center; ">
+          Build a Story
+        </div>
+        <div class="t-black tx-body" style="font-size: 32px; color: rgb(255, 255, 255);text-align: center; ">
+          Develop New Skills Through Play as You Create the Day’s Adventure
+        </div>
+      </div>
+      <div id="t1" class="text-nap hide ">
+        <div class="t-black tx-head"
+          style="font-size: 46px; font-weight: bold; color: rgb(255, 255, 255);text-align: center; ">
+          Time With Family and Friends
+        </div>
+        <div class="t-black tx-body" style="font-size: 32px; color: rgb(255, 255, 255);text-align: center; ">
+          Unplugged and Present Play to Benefit From Socialized Learning
+        </div>
+      </div>
+      <div id="t1" class="text-nap hide">
+        <div class="t-black tx-head"
+          style="font-size: 46px; font-weight: bold; color: rgb(255, 255, 255);text-align: center; ">
+          One of a Kind Heirloom
+        </div>
+        <div class="t-black tx-body" style="font-size: 32px; color: rgb(255, 255, 255);text-align: center; ">
+          Customize to Match Your Family’s Taste From Generation to Generation
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="video-banner" style="height: 700vh; position: relative; z-index: -1; ">
+    <canvas style="position: sticky; top: 0; width:100%" width="100%" id="lightpass"> </canvas>
+    <div class="img-slid-1" style="width: 100%; height: 7%; display:flex; align-items:center; justify-content:center;">
+      <div class="t-black tx-head"
+        style="font-size: 48px; font-weight: bold; color: rgb(255, 255, 255); text-align: center;  ">
+        Step Inside a World of Open-Ended Creative Play
+      </div>
+    </div>
+    <div class="img-slid-1" style="width: 100%; height: 13%; background-image: url('https://cdn.shopify.com/s/files/1/0636/2303/7146/files/Screen_Shot_2566-08-24_at_10.41.22.png?v=1693387459');   
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover; "> </div>
+    <div class="img-slid-1" style="width: 100%; height: 7%; display:flex; align-items:center;">
+      <div style=" border-radius: 25px; width: auto; height: 250px; align-items: center; display: flex; ">
+        <div>
+          <div class="t-black tx-head"
+            style="font-size: 46px; font-weight: bold; color: rgb(255, 255, 255);text-align: center; ">
+            Open Joy
+          </div>
+          <div class="t-black tx-body" style="font-size: 32px; color: rgb(255, 255, 255);text-align: center; ">
+            Play Creatively Within Your Dream House Designed by Your Imagination
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="img-slid-1" style="width: 100%; height: 13%; background-image: url('https://cdn.shopify.com/s/files/1/0636/2303/7146/files/LINE_ALBUM_2023.8.30_230830_1.jpg?v=1693387821');   
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;  "> </div>
+    <div class="img-slid-1" style="width: 100%; height: 7%; display:flex; align-items:center;">
+      <div style="  border-radius: 25px; width: auto; height: 250px; align-items: center; display: flex; ">
+        <div>
+          <div class="t-black tx-head"
+            style="font-size: 46px; font-weight: bold; color: rgb(255, 255, 255);text-align: center; ">
+            Build a Story
+          </div>
+          <div class="t-black tx-body" style="font-size: 32px; color: rgb(255, 255, 255);text-align: center; ">
+            Develop New Skills Through Play as You Create the Day’s Adventure
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="img-slid-1" style="width: 100%; height: 13%; background-image: url('https://cdn.shopify.com/s/files/1/0636/2303/7146/files/LINE_ALBUM_2023.8.30_230830_2.jpg?v=1693387823') ;  
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;  "> </div>
+    <div class="img-slid-1" style="width: 100%; height: 7%; display:flex; align-items:center;">
+      <div style="  border-radius: 25px; width: auto; height: 250px; align-items: center; display: flex; ">
+        <div>
+          <div class="t-black tx-head"
+            style="font-size: 46px; font-weight: bold; color: rgb(255, 255, 255);text-align: center; ">
+            Time With Family and Friends
+          </div>
+          <div class="t-black tx-body" style="font-size: 32px; color: rgb(255, 255, 255);text-align: center; ">
+            Unplugged and Present Play to Benefit From Socialized Learning
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="img-slid-1" style="width: 100%; height: 13%; background-image: url('https://cdn.shopify.com/s/files/1/0636/2303/7146/files/LINE_ALBUM_2023.8.30_230830_3.jpg?v=1693387825') ;  
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover; "> </div>
+    <div class="img-slid-1" style="width: 100%; height: 7%; display:flex; align-items:center;">
+      <div style=" border-radius: 25px; width: auto; height: 250px; align-items: center; display: flex; ">
+        <div>
+          <div class="t-black tx-head"
+            style="font-size: 46px; font-weight: bold; color: rgb(255, 255, 255);text-align: center; ">
+            One of a Kind Heirloom
+          </div>
+          <div class="t-black tx-body" style="font-size: 32px; color: rgb(255, 255, 255);text-align: center; ">
+            Customize to Match Your Family’s Taste From Generation to Generation
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="img-slid-1" style="width: 100%; height: 13%; background-image: url('https://cdn.shopify.com/s/files/1/0636/2303/7146/files/LINE_ALBUM_2023.8.30_230830_4.jpg?v=1693387828');  
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;  "> </div>
+  </div>
+  <div class="wrap-shadow">
+
+  </div>
+  <!-- <div class="tx-vd-slid-0 hidden-txt" style="position: absolute;  display: flex; justify-content: center; left: 0; top: 11%; width: 100%; line-height: 1.2;">
+                    <div class="v0" style=" border-radius: 25px; width: auto; height: 200px; align-items: center; display: flex;">
+                        <div class="t-black tx-head"
+                            style="font-size: 48px; font-weight: bold; color: rgb(255, 255, 255); text-align: center;  ">
+                           Step Inside a World of Open-Ended Creative Play 
+                        </div>
+                    </div>
+                </div>
+                <div class="tx-vd-slid-1 hidden-txt" style="position: absolute;  display: flex; justify-content: center; left: 0; top: 34%; width: 100%; line-height: 1.2; ">
+                    <div
+                        style=" border-radius: 25px; width: auto; height: 250px; align-items: center; display: flex; ">
+                        <div>
+                            <div class="t-black tx-head" style="font-size: 46px; font-weight: bold; color: rgb(255, 255, 255);text-align: center; ">
+                                Open Joy 
+                            </div>
+                            <div class="t-black tx-body" style="font-size: 32px; color: rgb(255, 255, 255);text-align: center; ">
+                                Play Creatively Within Your Dream House Designed by Your Imagination 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tx-vd-slid-2 hidden-txt" style="position: absolute;  display: flex; justify-content: center; left: 0; top: 54%; width: 100%;  line-height: 1.2;">
+                    <div
+                        style="  border-radius: 25px; width: auto; height: 250px; align-items: center; display: flex; ">
+                        <div>
+                            <div class="t-black tx-head" style="font-size: 46px; font-weight: bold; color: rgb(255, 255, 255);text-align: center; ">
+                                Build a Story 
+                            </div>
+                            <div class="t-black tx-body" style="font-size: 32px; color: rgb(255, 255, 255);text-align: center; ">
+                                Develop New Skills Through Play as You Create the Day’s Adventure 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tx-vd-slid-3 hidden-txt" style="position: absolute;  display: flex; justify-content: center; left: 0; top: 72%; width: 100%; line-height: 1.2;">
+                    <div
+                        style="  border-radius: 25px; width: auto; height: 250px; align-items: center; display: flex; ">
+                        <div>
+                            <div class="t-black tx-head" style="font-size: 46px; font-weight: bold; color: rgb(255, 255, 255);text-align: center; ">
+                                Time With Family and Friends 
+                            </div>
+                            <div class="t-black tx-body" style="font-size: 32px; color: rgb(255, 255, 255);text-align: center; ">
+                               Unplugged and Present Play to Benefit From Socialized Learning 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tx-vd-slid-4 hidden-txt" style="position: absolute;  display: flex; justify-content: center; left: 0; top: 90%; width: 100%; line-height: 1.2;">
+                    <div
+                        style=" border-radius: 25px; width: auto; height: 250px; align-items: center; display: flex; ">
+                        <div>
+                            <div class="t-black tx-head" style="font-size: 46px; font-weight: bold; color: rgb(255, 255, 255);text-align: center; ">
+                                One of a Kind Heirloom 
+                            </div>
+                            <div class="t-black tx-body" style="font-size: 32px; color: rgb(255, 255, 255);text-align: center; ">
+                               Customize to Match Your Family’s Taste From Generation to Generation 
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+</div>
+
+<script type="text/javascript">
+  window.onload = function () {
+    var x = window.matchMedia("(max-width: 1020px)")
+    const txt = document.querySelectorAll(".hidden-txt");
+    const t1 = document.querySelectorAll("#t1");
+    if (x.matches != true) {
+      //  new ScrollyVideo({
+      // scrollyVideoContainer: "scrolly-video",
+      //    src: "https://s3-us-west-2.amazonaws.com/catsy.803/4k1.mp4",
+      //   //useWebCodecs:false,
+      //  });
+
+      const html = document.documentElement;
+      const canvas = document.getElementById("lightpass");
+      const wrap_shadow = document.getElementsByClassName("wrap-shadow");
+      const context = canvas.getContext("2d");
+      const imageObj = document.getElementById('img');
+      const frameCount = 144; //number of images
+      const mathOpacity1 = 10
+      const currentFrame = index => (
+        `https://s3-us-west-2.amazonaws.com/catsy.803/ezgif-frame-${index.toString().padStart(3, '0')}.jpg`
+      )
+      const preloadImages = () => {
+        for (let i = 1; i < frameCount; i++) {
+          const img = new Image();
+          img.src = currentFrame(i);
+        }
+      };
+      const img = new Image()
+      img.src = currentFrame(1);
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      img.onload = function () {
+        context.drawImage(img, 0, 0, window.innerWidth, window.innerHeight);
+      }
+
+      const updateImage = index => {
+        img.src = currentFrame(index);
+        console.log(index);
+        console.log(t1);
+        context.drawImage(img, 0, 0, window.innerWidth, window.innerHeight);
+        if (index >= 5 && index <= 31) {
+          if (index >= 6 && index <= 7) {
+            t1[0].style.opacity = 0.5;
+          } else if (index >= 8 && index <= 18) {
+            t1[0].style.opacity = 1;
+          } else if (index >= 19 && index <= 28) {
+            t1[0].style.opacity = 0.5;
+          } else {
+            t1.forEach(element => {
+              element.style.opacity = 0;
+              t1[0].style.transform = scale(0);
+            });
+          }
+        } else if (index >= 38 && index <= 60) {
+          if (index >= 39 && index <= 41) {
+            t1[1].style.opacity = 0.5;
+          } else if (index >= 42 && index <= 56) {
+            t1[1].style.opacity = 1;
+          } else if (index >= 57 && index <= 59) {
+            t1[1].style.opacity = 0.5;
+          } else {
+            t1.forEach(element => {
+              element.style.opacity = 0;
+            });
+          }
+        } else if (index >= 79 && index <= 95) {
+          if (index >= 80 && index <= 81) {
+            t1[2].style.opacity = 0.5;
+          } else if (index >= 82 && index <= 92) {
+            t1[2].style.opacity = 1;
+          } else if (index >= 93 && index <= 94) {
+            t1[2].style.opacity = 0.5;
+          } else {
+            t1.forEach(element => {
+              element.style.opacity = 0;
+            });
+          }
+        } else if (index >= 107 && index <= 122) {
+          if (index >= 108 && index <= 109) {
+            t1[3].style.opacity = 0.5;
+          } else if (index >= 110 && index <= 119) {
+            t1[3].style.opacity = 1;
+          } else if (index >= 120 && index <= 121) {
+            t1[3].style.opacity = 0.5;
+          } else {
+            t1.forEach(element => {
+              element.style.opacity = 0;
+            });
+          }
+        } else if (index >= 128 && index <= 144) {
+          if (index >= 129 && index <= 130) {
+            t1[4].style.opacity = 0.5;
+          } else if (index >= 131 && index <= 141) {
+            t1[4].style.opacity = 1;
+          } else if (index >= 142 && index <= 143) {
+            t1[4].style.opacity = 0.5;
+          } else {
+            t1.forEach(element => {
+              element.style.opacity = 0;
+            });
+          }
+        } else {
+          t1.forEach(element => {
+            element.style.opacity = 0;
+          });
+        }
+
+      }
+
+
+      window.addEventListener('scroll', () => {
+        if (getPosition() >= 0 && getPosition() <= 1) {
+          const frameIndex = Math.min(
+            frameCount - 1,
+            Math.ceil(getPosition() * frameCount)
+          );
+          requestAnimationFrame(() => updateImage(frameIndex + 1))
+          wrap_shadow[0].style.opacity = getPosition()
+          if (getPosition() * mathOpacity1 <= 2.2) {
+            wrap_shadow[0].style.opacity = getPosition() * mathOpacity1
+          } else {
+            wrap_shadow[0].style.opacity = 1 - (getPosition() * 4)
+          }
+        }
+      });
+      preloadImages()
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show-txt');
+          } else {
+            entry.target.classList.remove('show-txt');
+          }
+        });
+      });
+      txt.forEach((el) => observer.observe(el))
+
+    }
+
+
+
+    function getPosition() {
+      el = document.querySelector("#lightpass");
+      const containerBoundingClientRect = el.parentNode.getBoundingClientRect()
+      const scrollPercent = (-containerBoundingClientRect.top) / (containerBoundingClientRect.height - window
+        .innerHeight);
+      // console.log('(-containerBoundingClientRect.top) : ' + (-containerBoundingClientRect.top));
+      // console.log('containerBoundingClientRect.height : ' + containerBoundingClientRect.height);
+      // console.log('window.innerHeight : ' + window.innerHeight);
+      // console.log('scrollPercent : ' + scrollPercent);
+      return scrollPercent
+    }
+
+
+    // function getCanvas() {
+    //     vid = document.getElementById("scrolly-video").getElementsByTagName("video");
+    //     if (vid.length == 1) {
+
+    //         if (vid[0].readyState == 4) {
+    //             document.getElementsByTagName('body')[0].style.overflow = "scroll";
+    //             return vid.length
+    //         } else {
+    //             setTimeout(function () {
+    //                 document.getElementsByTagName('body')[0].style.overflow = "hidden";
+    //                 getCanvas()
+    //             }, 100);
+    //         }
+    //     } else {
+    //         setTimeout(function () {
+    //             document.getElementsByTagName('body')[0].style.overflow = "hidden";
+    //             getCanvas()
+    //         }, 100);
+    //     }
+
+    // }
+  }
+</script>
+
+</html>

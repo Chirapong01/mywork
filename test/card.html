@@ -1,0 +1,152 @@
+<style>
+    .row {
+        display: flex;
+        padding: 0 10%;
+    }
+
+    .col {
+        width: 35%;
+    }
+
+    .st-card {
+        margin: auto;
+        width: 80%;
+
+    }
+
+    .st-footer {
+        margin: 20px 0;
+    }
+
+    @media screen and (max-width:720px) {
+       .row {
+        display: block;
+       }
+        .col {
+
+        width: 100%;
+        }
+
+        .st-card {
+            width: 80%;
+        }
+    }
+</style>
+
+  <div class="row">
+     {%- for block in section.blocks -%}
+        <div class="col">
+            <div class="st-card">
+              <a class="st-img"   href="{{ block.settings.link }}">
+               {%- if block.settings.image == blank -%}
+                <div class="gallery__image image-one placeholder-image {% if show_overlay_text %}dark{% endif %}">
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+              {%- else -%}
+                <div class="fade-in lazyload" 
+                     data-bgset="{% render 'bgset', image: block.settings.image %}"
+                     style="height: 40dvh; width: 100%;     background-repeat: no-repeat;  background-size: contain;"
+                     data-sizes="auto"
+                     data-parent-fit="contain"    
+                  >
+                  <noscript>
+                    <img src="{{ block.settings.image | img_url: '1024x1024' }}" class="rimage-background__image">
+                  </noscript>
+                </div>
+              {%- endif -%}
+              </a>
+                <div class="st-body">
+                    <div class="st-title">
+                        <h4> {{ block.settings.text-header }}</h4>
+                    </div>
+                    <div class="st-text">
+                        {{ block.settings.text }}
+                    </div>
+                </div>
+                <div class="st-footer">
+                    <b> <a href="{{ block.settings.link }}">{{ block.settings.text-url }}</a> </b>
+                </div>
+
+            </div>
+        </div>
+     {%- endfor -%}
+  </div>
+
+{% schema %}
+  {
+    "name": "Blog list with image",
+	"tag": "section",
+    "class": "section-image-with-text",
+	"templates": [
+      "404",
+      "article",
+      "blog",
+      "cart",
+      "collection",
+      "index",
+      "list-collections",
+      "page",
+      "product",
+      "search"
+    ],
+    "settings": [
+      
+    ],
+    "blocks": [
+     {
+      "type": "image",
+      "name": "Image",
+         "settings": [
+             {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+            },
+            {
+          "type": "text",
+          "id": "text-header",
+          "label": "header"
+          },
+           {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+          },
+           {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+           },
+          {
+          "type": "text",
+          "id": "text-url",
+          "label": "URL Text"
+          }
+  
+         ]
+     } 
+    ], 
+    "presets": [
+      {
+        "name": "Blog list with image",
+        "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
+    <style>
+        * {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+
+        .annomencement-bar {
+            position: relative;
+            height: 100%;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 24px;
+            background: #ac0808;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 0;
+            color: #72c900;
+            display: none;
+        }
+
+        .annomen-noswiper {
+            text-align: center;
+            font-size: 24px;
+            background: #ac0808;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 0;
+            color: #72c900;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .swiper-slide {
+                display: block;
+            }
+
+            .annomen-noswiper {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="annomencement-bar">
+        <!-- Swiper -->
+        <div class="swiper mySwiper1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+            </div>
+        </div>
+        <div class="annomen-noswiper">
+            <p> Slide 1 Slide 2 Slide 3 Slide 4 </p>
+        </div>
+    </div>
+
+
+    <style>
+        .endsin {
+            width: 45%;
+            margin: auto;
+            position: relative;
+            z-index: -1;
+        }
+
+        @media screen and (max-width: 600px) {
+            .endsin {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <br />
+    <h4 class="center"><span style="color: #000 ;">Black Friday</span> Sale Ends in </h4>
+    <div class="endsin">
+        <script src="https://cdn.logwork.com/widget/countdown.js"></script>
+        <a href="https://logwork.com/countdown-86b9" class="countdown-timer" data-timezone="Asia/Bangkok"
+            data-textcolor="#58585b" data-date="2023-11-27 23:59" data-background="#e85092" data-digitscolor="#ffffff"
+            data-unitscolor="#58585b">ㅤ</a>
+    </div>
+
+    <script src="https://cdn.logwork.com/widget/countdown.js"></script>
+    <div style="position: relative; z-index: -1;">
+        <script src="https://cdn.logwork.com/widget/countdown.js"></script>
+        <a href="https://logwork.com/countdown-86b9" class="countdown-timer" data-timezone="Asia/Bangkok"
+            data-textcolor="#58585b" data-date="2023-11-27 23:59" data-background="#e85092" data-digitscolor="#ffffff"
+            data-unitscolor="#58585b">ㅤ</a>
+    </div>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper1", {
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+</body>
+
+</html>

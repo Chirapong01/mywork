@@ -1,0 +1,94 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: VAG Rounded Next Thin;
+	line-height: 4.2rem;
+}
+
+.ParallaxVideo{ 
+    height: 300px;
+    padding-bottom: 50px;
+    padding-top: 50px; 
+}
+.ParallaxVideo video{ 
+    min-width: 100%;
+    position: fixed;
+    top:0;
+    z-index: -999;
+}
+.ParallaxVideo h1 {
+  color: #fff;
+  font-size: 76px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+.SnellRoundhand {
+	font-family: SnellRoundhand;
+
+}
+
+.watch_vdo {
+	z-index: 1; 
+	cursor: pointer;
+}
+.watch_vdo:hover{
+	text-decoration: underline;
+}
+
+.swap-loader{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.822);
+	z-index: 99999;
+	overflow: hidden;
+}
+.loader {
+	border: 10px solid #d26f13e9;
+	border-radius: 50%;
+	border-top: 10px solid #ddd9d2c1;
+	width: 100px;
+	height: 100px;
+	-webkit-animation: spin 2s linear infinite; /* Safari */
+	animation: spin 2s linear infinite;
+	margin: auto;
+
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+  }
+.scroll-vid {
+	.content {
+		width: 100%;
+		position: sticky;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+	}
+
+}
+
+@font-face {
+	font-family: 'VAG Rounded Next Thin';
+	src: url(https://cdn.shopify.com/s/files/1/0550/2913/7495/files/Monotype_-_VAG_Rounded_Next_Thin_dab944f0-2580-4111-96df-229e539441e8.woff2?v=1692845437) format('woff2');
+}
+
+@font-face {
+	font-family: 'SnellRoundhand';
+	src: url(https://cdn.shopify.com/s/files/1/0550/2913/7495/files/SnellRoundhand-01.woff2?v=1692845575) format('woff2');
+}

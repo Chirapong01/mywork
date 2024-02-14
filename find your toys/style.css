@@ -1,0 +1,36 @@
+select {
+    height: 40px;
+}
+
+#Frame-1 {
+    transition: all 1s;
+    animation: drive  4s infinite ;
+}
+ #x1{
+    animation: colors  1s infinite ;
+}
+
+@keyframes colors {
+    0% {
+        fill: #E73B37;
+        background-color: #E73B37;
+    }
+    50%{
+        fill: #2b7907;
+        background-color: #2b7907;
+    }
+    100% {
+        fill: #060e80;
+        background-color: #060e80;
+    }
+}
+
+@keyframes drive {
+    0% {
+        transform: translate(0, 0);
+        
+    }
+    100% {
+        transform: translate(0, -2000%);
+    }
+}
