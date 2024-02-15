@@ -10,27 +10,17 @@
 
     <!-- Demo styles -->
     <style>
-        html,
-        body {
+        .slidwarp-1 {
             position: relative;
             height: 100%;
         }
 
-        body {
-            background: #eee;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            color: #000;
-            margin: 0;
-            padding: 0;
-        }
-
-        .swiper {
+        .swiper-1 {
             width: 100%;
             height: 100%;
         }
 
-        .swiper-slide {
+        .swiper-slide-1 {
             text-align: center;
             font-size: 18px;
             background: #fff;
@@ -56,7 +46,7 @@
             width: 100%;
             height: 178px;
             background-image: url('https://cdn.shopify.com/s/files/1/0550/2913/7495/files/500.jpg?v=1707907627');
-            background-size: cover;
+            background-size: contain;
             background-position: top;
             background-repeat: no-repeat;
             border-radius: 20px 20px 0 0;
@@ -91,40 +81,35 @@
 
 <body>
     <!-- Swiper -->
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="card-warp">
-                    <div class="card-body">
+    <div class="slidwarp-1">
+        <div class="swiper-1 crmSlider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card-warp">
+                        <div class="card-body">
 
-                        <div class="header"></div>
-                        <div class="info">
-                            <div class="stong">
-                                Lorem
+                            <div class="header"></div>
+                            <div class="info">
+                                <div class="stong">
+                                    Lorem
+                                </div>
+                                <div class="des">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                </div>
                             </div>
-                            <div class="des">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                        <div class="card-footer">
+                            <div
+                                style="display: flex;background-color: rgb(133, 136, 91); width: 90px;margin-right: 5px; height: 40px; border-radius: 20px 5px 20px 5px;">
+                                <div style="margin: auto; ">
+                                    1111 แต้ม
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card-footer">
-                        <div
-                            style="display: flex;background-color: rgb(133, 136, 91); width: 90px;margin-right: 5px; height: 40px; border-radius: 20px 5px 20px 5px;">
-                            <div style="margin: auto; ">
-                                1111 แต้ม
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div> 
+                <div class="swiper-slide">21</div>
             </div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 6</div>
-            <div class="swiper-slide">Slide 7</div>
-            <div class="swiper-slide">Slide 8</div>
-            <div class="swiper-slide">Slide 9</div>
         </div>
     </div>
 
@@ -133,34 +118,39 @@
 
     <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper(".mySwiper", {
+        var swiper = new Swiper(".crmSlider", {
             slidesPerView: 8,
+            spaceBetween: 30,
             freeMode: true,
             breakpoints: {
-                 150:{
-                    slidesPerView:1
-                 },
-                 310:{
-                    slidesPerView:2
-                 },
-                 480:{
-                    slidesPerView:3
-                 },
-                 620:{
-                    slidesPerView:4
-                 },
-                 820:{
-                    slidesPerView:5
-                 },
-                 999:{
-                    slidesPerView:6
-                 },
-                 1100:{
-                    slidesPerView:7
-                 },
-                 1200:{
-                    slidesPerView:8
-                 }
+                150: {
+                    slidesPerView: 1
+                },
+                310: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                480: {
+                    slidesPerView: 3
+                },
+                620: {
+                    slidesPerView: 4,
+                    spaceBetween: 15,
+                },
+                820: {
+                    slidesPerView: 5
+                },
+                999: {
+                    slidesPerView: 6,
+                    spaceBetween: 20,
+                },
+                1100: {
+                    slidesPerView: 7,
+                    spaceBetween: 25,
+                },
+                1200: {
+                    slidesPerView: 8
+                }
             },
         });
     </script>
