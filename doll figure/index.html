@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .swap-loader {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.822);
+            z-index: 99999;
+            overflow: hidden;
+        }
+
+        .loader {
+            border: 5px solid #f3f3f3;
+            -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+            border-top: 5px solid #555;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin: auto;
+            display: none;
+
+        }
+
+        /* Safari */
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .row {
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+        }
+
+        .frd {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: VAG Rounded Next Thin;
+        }
+
+        .SnellRoundhand {
+            font-family: SnellRoundhand;
+        }
+
+        .watch_vdo {
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .watch_vdo:hover {
+            text-decoration: underline;
+        }
+        .fade-out{
+            display: flex;
+            transition:  0.5;
+        }
+        .scroll-vid {
+            .content {
+                width: 100%;
+                position: sticky;
+                top: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+        }
+
+
+        @font-face {
+            font-family: 'VAG Rounded Next Thin';
+            src: url(https://cdn.shopify.com/s/files/1/0550/2913/7495/files/Monotype_-_VAG_Rounded_Next_Thin_dab944f0-2580-4111-96df-229e539441e8.woff2?v=1692845437) format('woff2');
+        }
+
+        @font-face {
+            font-family: 'SnellRoundhand';
+            src: url(https://cdn.shopify.com/s/files/1/0550/2913/7495/files/SnellRoundhand-01.woff2?v=1692845575) format('woff2');
+        }
+
+        @media only screen and (max-width: 1280px) {
+            .text-v-w {
+                line-height: 2rem !important;
+            }
+
+            .text-v-1-1 {
+                font-size: 32px !important;
+            }
+
+            .text-v-1-2 {
+                font-size: 42px !important;
+            }
+
+            .text-v-1-3 {
+                font-size: 40px !important;
+            }
+        }
+
+        @media only screen and (max-width: 1020px) {
+            .text-v-w {
+                line-height: 1.4rem !important;
+            }
+
+            .text-v-1-1 {
+                font-size: 20px !important;
+            }
+
+            .text-v-1-2 {
+                font-size: 24px !important;
+            }
+
+            .text-v-1-3 {
+                font-size: 24px !important;
+            }
+        }
+    </style>
+    <!-- <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" /> -->
+</head>
+
+<body>
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <div class="frd" style="width:100%; height:100%;">
+        <div class="app" style="position: relative;">
+            <div class="loader" style="position: absolute; z-index: 999;top: 40%; left: 48%;"></div>
+            <div id="vid-one" class="scroll-vid" style="height: auto">
+                <div class="content">
+                    <video id="bannerVid" style="width: 100%; height: 100%;  clip-path: inset(0px);" tabindex="0"
+                        preload="metadata" autobuffer="autobuffer" muted loop>
+                        <source src="https://cdn.shopify.com/videos/c/o/v/798432624bbb4fe38f7668eb60e8ed81.mp4">
+                    </video>
+                    <div id="banner-wrap"
+                        style="position: absolute; width: 100%; height: 100%; background-color: rgb(0 0 0 / 76%)">
+                    </div>
+                    <div class="text-v-w"
+                        style="position: absolute;  display: flex; align-items: center; justify-content: center; left: 0; top: 0%; height: 100%; width: 100%; 	line-height: 4.2rem;">
+                        <div>
+                            <div class="text-v-1-1"
+                                style=" font-size: 46px;  color: rgb(255, 255, 255);text-align: center; ">
+                                Introducing the Exquisite</div>
+                            <div class="text-v-1-2"
+                                style="font-size: 76px; color: rgb(255, 255, 255);text-align: center; ">
+                                VICTORIAN DOLLHOUSE</div>
+                            <div class="text-v-1-3 SnellRoundhand"
+                                style=" font-size: 48px;color: rgb(255, 255, 255);text-align: center; ">
+                                A Timeless Treasure</div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div style="height: 900px;"></div>
+    <!-- <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script> -->
+    <script type="text/javascript">
+        loader = document.getElementsByClassName('loader')
+        document.body.style.overflow = 'hidden';
+        document.body.style.backgroundColor = " #0000007b";
+        loader[0].style.display = "block";
+        vdo = document.getElementById("bannerVid");
+        wrap = document.getElementById("banner-wrap")
+        txt = document.getElementsByClassName("text-v-w")
+        settime()
+         document.getElementById("banner-wrap")
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    console.log('1221');
+                } else {
+                    console.log('1221');
+                }
+            });
+        });
+        setTimeout(() => {
+            loader[0].style.display = "none";
+            document.body.style.overflow = 'scroll';
+            document.body.style.backgroundColor = " #00000000";
+            vdo.play();
+        }, 3000);
+
+
+        function settime() {
+            setInterval(function () {
+                // console.log(vdo.currentTime);
+                if (vdo.currentTime >= 10 && vdo.currentTime <= 11) {
+                    // console.log("10 sec");
+                } else if (vdo.currentTime >= 0 && vdo.currentTime <= 1) {
+                    // console.log("0 sec");
+                }
+            }, 1000);
+        }
+    </script>
+
+</body>
+
+</html>
